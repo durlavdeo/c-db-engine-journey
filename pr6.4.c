@@ -64,6 +64,7 @@ int addStudent(FILE *fp, Student *s)
 //this one was so cool to implement and also took the longest(ofcourse!)..
 //so what it simply does is shifts the records one by one to the left and then the file is truncated to the one less record...
 // becuase after shifting every records to the left, the last and second last record will be identical and so we truncate the last record...and it physcailly shrinks the size of the file..
+//which is the worst way to perform a deletion...it nearly opeartes at ~O(n)..so not feasible for the large datasets...
 int deleteStudent(FILE *fp,int idx)
 {
     int count = 0;
